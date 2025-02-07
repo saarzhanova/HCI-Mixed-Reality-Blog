@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HCI for Mixed Reality. Final Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<main>
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
+        <div class="col-md-6 p-lg-5 mx-auto my-5">
+            <h1 class="display-3 fw-bold">Plane Selection</h1>
+            <h4 class="fw-normal text-muted mb-3">Alina & Mattew</h4>
+            <div class="d-flex gap-3 justify-content-center lead fw-normal ms-3 ps-2">
+                <a class="icon-link" href="index.html">
+                    Main page
+                    <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="p-3 text-bg-dark" id="menu">
+        <div class="container">
+            <ul class="nav me-lg-auto mb-2 justify-content-between mb-md-0">
+                <li><a href="#brainstorming" class=" px-2 text-white"><h4>1. Brainstorming</h4></a></li>
+                <li><a href="#concept" class=" px-2 text-white"><h4>2. Concept</h4></a></li>
+                <li><a href="#implementation" class=" px-2 text-white"><h4>3. Implementation</h4></a></li>
+                <li><a href="#evaluation" class=" px-2 text-white"><h4>4. Evaluation</h4></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="w-100 mx-0 my-3" id="brainstorming">
+        <div class="pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden flex-fill" style="background-color: #ffa343">
+            <a href="project.html" class="text-decoration-none text-reset">
+                <div class="my-3 p-4 pb-5">
+                    <h2 class="display-5">Brainstorming<a href="#menu" class="text-dark mx-3"><span>O</span></a></h2>
+                    <p class="lead"></p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class=" rw d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 mx-0 fs-4">
+        <div class=" col-6 pt-3 px-3 pt-md-5 px-md-5 text-left overflow-hidden flex-fill">
+            <div class="my-3 p-3">
+                <div class="lead mx-md-5 px-5 fs-4">
+                    <img src="src/project/Mixed%20Reality%20-%20Frame%2011.jpg" class="card-img-top w-100 py-3" alt="Brainstorming">
+                    <div class="card-body text-center"><p class="card-text">Sketches. Brainstorming</p></div>
+                    <p>
+                        Before we met up, we brainstormed potential ideas to implement. The initial plan was to trawl through research papers on IEEE, specifically the IEEE Annual International Symposium Virtual Reality conference, and get inspired or mix together different ideas proposed by the various papers. But an idea stayed in my mind; the professor was not asking for a ‘useful’, or ‘revolutionary’, or even ‘easier’ selection technique. No, we was simply asking that we create one and then define our own adjective. So, I wanted to go against the grain and find a ‘useless but fun’ selection technique. What was an annoying way of selecting something? What would be fun, but also not something you’d actually use?
+                    </p>
+                    <p>A game would be fun. Gamification was and is a big concept in video game development, why not incorrectly apply it here? Thus, I thought of the idea to fly a plane to the object. The user would spawn a plane, then fly it all the way to its destination.
+                        Once we met up for the official brainstorming session, we kept brainstorming more ideas.</p>
+                    <p>Once we met up for the official brainstorming session, we kept brainstorming more ideas. The final shortlist was as follows:
+                    </p>
+                    <ul>
+                        <li>Plane selection technique</li>
+                        <ul>
+                            <li>As described above, you fly a plane to select an object</li>
+                        </ul>
+                        <li>Camera selection technique</li>
+                        <ul>
+                            <li>You take a picture of the scene, using a retro polaroid camera, and the object in the center is the object that is selected</li>
+                            <img src="src/project/Mixed%20Reality%20-%20Frame%2012.jpg" class="card-img-top w-100 py-3" alt="Camera selection sketching 1">
+                            <div class="card-body text-center"><p class="card-text">Camera selection sketching 1</p></div>
+                            <li>Alternatively, you take a picture of a scene, using the same retro polaroid camera, then circle or mark off the object you want to select. </li>
+                            <img src="src/project/Mixed%20Reality%20-%20Frame%2013.jpg" class="card-img-top w-100 py-3" alt="Camera selection sketching 2">
+                            <div class="card-body text-center"><p class="card-text">Camera selection sketching 2</p></div>
+                        </ul>
+                        <li>Cone casting:</li>
+                        <ul>
+                            <li>A cone, with its top at the controller, spreading out in the direction the controller is pointing, acts as the preselection area. The controller is then used to navigate the different slices of the cone, where the user can then select their object.</li>
+                            <li>This was the boring backup option, the ‘useful’ selection technique, in case the professor did not approve of the first two ideas.</li>
+                        </ul>
+                    </ul>
+                    <p>
+                        Cone casting was ultimately discarded due to it not being fun. We opted to go with the other two techniques, because we thought they would be fun to implement and use.
+                    </p>
+                    <img src="src/project/Mixed%20Reality%20-%20Frame%2016.jpg" class="card-img-top w-100 py-3" alt="Final plane and camera selection techniques.">
+                    <div class="card-body text-center"><p class="card-text">Final plane and camera selection techniques.</p></div>
+                    <p>We created a presentation introducing the two techniques, and, on the professor’s advice, decided to go with the plane selection technique.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-100 mx-0" id="concept">
+        <div class="pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden flex-fill" style="background-color: #ffa343">
+                <div class="my-3 p-4 pb-5">
+                    <h2 class="display-5">Concept<a href="#menu" class="text-dark mx-3"><span>O</span></a></h2>
+                    <p class="lead"></p>
+                </div>
+        </div>
+    </div>
+    <div class=" rw d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 mx-0 fs-4">
+        <div class=" col-6 pt-3 px-3 pt-md-5 px-md-5 text-left overflow-hidden flex-fill">
+            <div class="my-3 p-3">
+                <div class="lead mx-md-5 px-5 fs-4">
+                    <h3 class="text-center my-4">What is this technique</h3>
+                    <p>
+                    The flying plane technique is a unique and novel selection technique, whereby instead of boringly selecting an object and having it selected, we fly a remote controlled (RC) plane to the object. To set its initial direction, we point in the direction we want it to go. In many respects, the start resembles raycasting.
+                    However, if one were to select the object as in raycasting, they would be surprised that a plane spawns in front of them, flying in that direction.
+                    </p>
+                    <h3 class="text-center my-4">How To Control The Airplane</h3>
+                    <p>
+                    To have the airplane set off, the secondary hand trigger needs to be pressed. Then, when in flight, the user needs to be able to control the plane’s three axes of freedom: yaw, roll, and pitch. The right controller is used to control yaw and pitch of the airplane, with the B and A buttons used to control roll. To select an object, the plane has to enter its bounding box, where the user can then press the primary index trigger to select an object.
+                    </p>
+                    <div class="text-center">
+                        <img src="src/project/rightController.jpg" class="card-img-top w-50 py-3" alt="Diagram for Right Controller">
+                        <div class="card-body text-center"><p class="card-text">Diagram for Right Controller</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="w-100 mx-0" id="implementation">
+        <div class="pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden flex-fill" style="background-color: #ffa343">
+                <div class="my-3 p-4 pb-5">
+                    <h2 class="display-5">Implementation<a href="#menu" class="text-dark mx-3"><span>O</span></a></h2>
+                    <p class="lead"></p>
+                </div>
+        </div>
+    </div>
+    <div class=" rw d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 mx-0 fs-4">
+        <div class=" col-6 pt-3 px-3 pt-md-5 px-md-5 text-left overflow-hidden flex-fill">
+            <div class="my-3 p-3">
+                <div class="lead mx-md-5 px-5 fs-4">
+                    <p>
+                        We devided our work in two parts. Alina managed switching to airplane control mode, spawning an airplane, collision of the airplane with products on the shelf, and selecting an object. Mattew was working on airplane movement and controls as well as connecting the project to the VR headset and merging both parts of the work. Please, feel free to navigate the links below to explore our experience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="raw d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 mx-0">
+        <div class="col-6 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden flex-fill">
+            <div class="my-3 p-3">
+                <a href="#alina" class=" px-2 text-dark"><h4>Alina's part</h4></a>
+            </div>
+        </div>
+        <div class="col-6 me-md-0 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden flex-fill">
+                <div class="my-3 py-3">
+                    <a href="#mattew" class=" px-2 text-dark"><h4>Mattew's part</h4></a>
+                </div>
+        </div>
+    </div>
+
+    <div id="alina">
+        <div class="p-3 text-bg-dark" id="alinaMenu">
+            <div class="container">
+                <ul class="nav me-lg-auto mb-2 justify-content-between mb-md-0">
+                    <li><a href="#settingUp" class=" px-2 text-white"><h4>1. Setting Up</h4></a></li>
+                    <li><a href="#installPlane" class=" px-2 text-white"><h4>2. Plane Model Installation</h4></a></li>
+                    <li><a href="#spawnPlane" class=" px-2 text-white"><h4>3. Plane Spawning</h4></a></li>
+                    <li><a href="#selectObject" class=" px-2 text-white"><h4>4. Selecting Objects with a Plane</h4></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="rw d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 mx-0 fs-4" id="alinaBody">
+            <div class=" col-6 pt-3 px-3 pt-md-5 px-md-5 text-left overflow-hidden flex-fill">
+                <div class="my-3 p-3">
+                    <div class="lead mx-md-5 px-5 fs-4">
+                        <div id="settingUp" class="alina pb-4">
+                            <h3 class="text-center my-4">Setting Up</h3>
+                            <p>
+                                First thing I did was cloning the Supermarket repository from github to my computer.
+                            </p>
+                            <ol>
+                                <li>Copy GitHub repository link</li>
+                                <li>Open Command line in the folder where I want to clone the repository</li>
+                                <li>Type git clone *your-repository-link*
+                                </li>
+                            </ol>
+                            <p>Then I needed to open the project in Unity.</p>
+
+                            <ol>
+                                <li>Open Unity Hub</li>
+                                <li>Go to Add -> Add project from disc
+                                    <div class="text-center">
+                                        <img src="src/project/add%20new%20project.png" class="card-img-top w-100 py-3" alt="Add new project. Unity">
+                                        <div class="card-body text-center"><p class="card-text">Add new project. Unity</p></div>
+                                    </div>
+                                </li>
+                                <li>Find object in the folder where I cloned it</li>
+                                <li>Click Open
+                                    <div class="text-center">
+                                        <img src="src/project/add%20project%203.png" class="card-img-top w-100 py-3" alt="Open project. Unity">
+                                        <div class="card-body text-center"><p class="card-text">Open project. Unity</p></div>
+                                    </div></li>
+                            </ol>
+
+                            <p>What I saw after was that I didn’t have the right Unity version to work with the Supermarket project. It required the 2022.3.6f1 version, while I had 2022.3.36f1.</p>
+
+                            <p>In order to install it</p>
+
+                            <ol>
+                                <li>I clicked on the Danger icon next to the Supermarket project I uploaded.</li>
+                                <li>Click Install</li>
+                                <li>Waited for the download</li>
+                            </ol>
+
+                            <p><strong>Note:</strong> To successfully install the version there should be at least 3 Gb more space than it says on Installation. At the beginning I was trying to install it having 5.43Gb and then 6.20Gb left on my computer storage, while the installation required 4.99Gb and it ended with an error.</p>
+
+                            <p>This caused another problem. Firstly, after the installation error, the 2022.3.6f1 version was visible in the Installs list, however, I couldn't open the project, as it couldn’t find the right files in the 2022.3.6f1 version. Secondly, there was no uninstall button where it should’ve been and the “Remove” button didn’t do anything.</p>
+
+                            <p>So the solution was to manually delete the version.</p>
+
+                            <ol>
+                                <li>Click on version Setting</li>
+                                <li>Click “Show in Explorer”. This will open the folder with the version</li>
+                                <li>Go back to the folder with all the versions</li>
+                                <li>Delete the folder with the wrongly installed version</li>
+                                <li>Restart (close completely and then reopen Unity Hub)</li>
+                            </ol>
+
+                            <p>Then I could open the project. While the project was opening I saw a popup screen saying something about missing files. When I clicked Retry it just resulted in the same error and the project didn’t open. But after I clicked “Continue”, the project opened successfully.</p>
+
+                            <p>From this point the things went smoother.</p>
+                        </div>
+                        <div id="installPlane" class="alina pb-4">
+                            <h3 class="text-center my-4">Plane Model Installation</h3>
+                            <ol>
+                                <li>Found model that we linked on Unity Asset Store <a href="https://assetstore.unity.com/" target="_blank">Unity Asset Store</a></li>
+                                <li>I was already automatically logged in with my Unity account.</li>
+                                <li>Added it to my assets by clicking “Add to My Assets”.
+                                    <div class="text-center">
+                                        <img src="src/project/Add%20to%20my%20assets.png" class="card-img-top w-100 py-3" alt="Diagram for Right Controller">
+                                        <div class="card-body text-center"><p class="card-text">Diagram for Right Controller</p></div>
+                                    </div></li>
+                                </li>
+                            </ol>
+
+                            <p>Then in Unity:</p>
+
+                            <ol>
+                                <li>Clicked Window -> Package Manager</li>
+                                <li>In the top left “Packages: …” dropdown click My Assets
+                                    <div class="text-center">
+                                        <img src="src/project/MyAssets.png" class="card-img-top w-50 py-3" alt="My Assets">
+                                        <div class="card-body text-center"><p class="card-text">My Assets. Unity</p></div>
+                                    </div>
+                                </li>
+                                <li>Click on the plane model -> Download. </li>
+                                <li>After it finished downloading, click Import to add a model to our project.<div class="text-center">
+                                    <img src="src/project/Import%20Asset.png" class="card-img-top w-50 py-3" alt="Import Asset">
+                                    <div class="card-body text-center"><p class="card-text">Import Asset. Unity</p></div>
+                                </div></li>
+                            </ol>
+
+                            <p>Then I could navigate to the installed folder in Unity Project. The model was in <strong>Prefabs -> Models</strong>.<div class="text-center">
+                            <img src="src/project/findPlane.png" class="card-img-top w-50 py-3" alt="Find Model. Unity Tutorial">
+                            <div class="card-body text-center"><p class="card-text">How to find imported Asset. Unity Tutorial</p></div>
+                        </div></p>
+
+                            <p>After adding a model to the project, I started by trying to make it appear and disappear.</p>
+
+                        </div>
+                        <div id="spawnPlane" class="alina pb-4">
+                            <h3 class="text-center my-4">Plane Spawning</h3>
+                            <ol>
+                                <li>Created a script for airplane spawning:
+                                    <ul>
+                                        <li>In the <strong>Scripts</strong> folder, I created the <strong>Project</strong> folder and created a script there, calling it <strong>Airplane Spawner</strong>.</li>
+                                        <li>In the <strong>Update</strong> function, in the <strong>AirplaneSpawner</strong> class, I call a <strong>SpawnAirplane</strong> function on mouse click. Later, when I make sure it works with mouse click, I’ll replace it with a joystick click. <div class="text-center">
+                                            <img src="src/project/updateFunctionAirplaneSpawner.png" class="card-img-top w-50 py-3" alt="AirplaneSpawner. Unity Tutorial">
+                                            <div class="card-body text-center"><p class="card-text">Function AirplaneSpawner. Unity Tutorial</p></div>
+                                        </div></li>
+                                        <li>In the <strong>SpawnAirplane</strong> function, if the airplane model was not in the hierarchy yet, I instantiated a copy of the airplane object on the spawn point. <div class="text-center">
+                                            <img src="src/project/SpawnAirplaneFunc0.png" class="card-img-top w-50 py-3" alt="SpawnAirplane function. Unity Tutorial">
+                                            <div class="card-body text-center"><p class="card-text">SpawnAirplane function. Unity Tutorial</p></div>
+                                        </div></li>
+                                    </ul>
+                                </li>
+                                <li>Created an airplane spawn point:
+                                    <ul>
+                                        <li>In the hierarchy, created an <strong>Empty Object</strong> as the <strong>Main Camera</strong> child.</li>
+                                        <li>Called it <strong>SpawnPoint</strong> and changed its position so that it was slightly in front of the camera. <div class="text-center">
+                                            <img src="src/project/SpawnerPoint.png" class="card-img-top w-100 py-3" alt="SpawnerPoint. Unity Tutorial">
+                                            <div class="card-body text-center"><p class="card-text">SpawnerPoint. Unity Tutorial</p></div>
+                                        </div></li>
+                                    </ul>
+                                </li>
+                                <li>Added an airplane spawning script to the <strong>Main Camera</strong>.
+                                    <ul>
+                                        <li>For this, I dragged the <strong>AirplaneSpawner</strong> script to the <strong>Main Camera’s Inspector</strong>. <div class="text-center">
+                                            <img src="src/lab2/DragAirplaneSpawner.jpg" class="card-img-top w-100 py-3" alt="Drag AirplaneSpawner. Unity Tutorial">
+                                            <div class="card-body text-center"><p class="card-text">Drag AirplaneSpawner. Unity Tutorial</p></div>
+                                        </div></li>
+                                    </ul>
+                                </li>
+                                <li>Dragged an <strong>Airplane Model</strong> and the <strong>SpawnPoint</strong> object inside the <strong>AirplaneSpawner</strong> script component. <div class="text-center">
+                                    <img src="src/lab2/DragAirplane.jpg" class="card-img-top w-100 py-3" alt="Drag Airplane. Unity Tutorial">
+                                    <div class="card-body text-center"><p class="card-text">Drag Airplane. Unity Tutorial</p></div>
+                                </div></li>
+                            </ol>
+
+
+                            <p>As a result, when I click with my mouse in play mode, I can see an airplane spawning in front of the camera.</p>
+
+                            <p>Unfortunately, the plane was too big. <div class="text-center">
+                            <img src="src/project/PlaneSpawningExample1.png" class="card-img-top w-100 py-3" alt="PlaneSpawning Example 1. Unity Tutorial">
+                            <div class="card-body text-center"><p class="card-text">Plane Spawning Example1. Unity Tutorial</p></div>
+                        </div></p>
+
+                            <p>I had to put the spawn point further away to be able to see it. To make the airplane smaller, I added this line of code to the <strong>SpawnAirplane</strong> function:</p>
+
+                            <pre><code>plane.transform.localScale = Vector3.one * 0.025f;</code></pre>
+
+                            <p><div class="text-center">
+                            <img src="src/project/PlaneSpawningExample2.png" class="card-img-top w-100 py-3" alt="Plane Spawning Example 2. Unity Tutorial">
+                            <div class="card-body text-center"><p class="card-text">Plane Spawning Example 2. Unity Tutorial</p></div>
+                        </div></p>
+
+                            <p>The plane had to be so small that it would only fit in one object on a supermarket shelf in order to select only one object.</p>
+
+                        </div>
+                        <div id="selectObject" class="alina pb-4">
+                            <h3 class="text-center my-4">Selecting Objects with a Plane</h3>
+
+                            <p>Our idea was that when the plane flies through the product on the shelf, the user would be able to select it by clicking on the joystick button. However, after flying tests, we saw that instead of going through the objects, the plane hit them.</p>
+
+                            <p>To solve this problem, I realized that, as in the Roll-a-Ball tutorial, the plane had to have an <strong>isTrigger</strong> field checked. This way, we could select an object on trigger enter. However, I did not add the Airplane model to the hierarchy and only spawned it on click. At this point, I realized that I needed to change the logic behind airplane spawning:</p>
+
+                            <ol>
+                                <li>Put a plane in the hierarchy by dragging a model from <strong>Prefabs -> Models</strong> to the hierarchy. <div class="text-center">
+                                    <img src="src/lab2/addPlaneToHierarchy.jpg" class="card-img-top w-100 py-3" alt="Add Plane To Hierarchy. Unity Tutorial">
+                                    <div class="card-body text-center"><p class="card-text">Add Plane To Hierarchy. Unity Tutorial</p></div>
+                                </div></li>
+                                <li>Added <strong>Box Collider</strong> component in the Airplane inspector and checked <strong>isTrigger</strong>. <div class="text-center">
+                                    <img src="src/lab2/isTrigger.jpg" class="card-img-top w-100 py-3" alt="isTrigger. Unity Tutorial">
+                                    <div class="card-body text-center"><p class="card-text">isTrigger. Unity Tutorial</p></div>
+                                </div></li>
+                                <li>Then we deactivated it beforehand by unchecking it in the inspector field next to the airplane name. <div class="text-center">
+                                    <img src="src/project/disactivatePlane.png" class="card-img-top w-50 py-3" alt="DisactivatePlane. Unity Tutorial">
+                                    <div class="card-body text-center"><p class="card-text">Disactivate Plane. Unity Tutorial</p></div>
+                                </div></li>
+                                <li>Next, I dragged this Airplane object to the <strong>AirplaneSpawner</strong> script in the Main Camera inspector, as shown in the screenshot. <div class="text-center">
+                                    <img src="src/lab2/DragAirplaneToCamera.jpg" class="card-img-top w-100 py-3" alt="Drag Airplane To Camera. Unity Tutorial">
+                                    <div class="card-body text-center"><p class="card-text">Drag Airplane To Camera. Unity Tutorial</p></div>
+                                </div></li>
+                            </ol>
+
+                            <p>Now, instead of instantiating a plane in the <strong>AirplaneSpawner</strong> script, inside the <strong>SpawnAirplane</strong> function, we just position an airplane model on the spawn point and activate it. We also initialized <strong>plane_spawned</strong> as <em>false</em> by default and set it to <em>true</em> when spawning the airplane just in case. <div class="text-center">
+                            <img src="src/project/SpawnAirplaneFunc1.png" class="card-img-top w-50 py-3" alt="SpawnAirplane Function 1. Unity Tutorial">
+                            <div class="card-body text-center"><p class="card-text">SpawnAirplane Function 1. Unity Tutorial</p></div>
+                        </div></p>
+
+                            <p>This way, the plane still appeared on click, but the logic behind it became different. Instead of instantiating, we just activated it. This allowed the plane to fly through objects and send a signal to the respective function when it did.</p>
+
+                            <p>To create a function that would watch for trigger entries, I:</p>
+
+                            <ol>
+                                <li>Created a script and called it <strong>PlaneCrusher</strong>.</li>
+                                <li>Inside the <strong>PlaneCrusher</strong> script, created a function <strong>OnTriggerEnter</strong>. The idea was that when the plane flies into objects, the user has to press a button on the joystick to select the object.</li>
+                                <li>Inside the function, I added simple logic: when a certain button is clicked, the game object that was triggered is selected.</li>
+                                <li>Attached the <strong>PlaneCrusher</strong> script to the Airplane by dragging it to the Airplane's inspector. <div class="text-center">
+                                    <img src="src/lab2/dragPlaneCrusher.jpg" class="card-img-top w-100 py-3" alt="Drag PlaneCrusher. Unity Tutorial">
+                                    <div class="card-body text-center"><p class="card-text">Drag PlaneCrusher. Unity Tutorial</p></div>
+                                </div></li>
+                            </ol>
+
+                            <p>At first, it didn’t work because I forgot to change the Interaction technique in <strong>TaskManager</strong> from <strong>Raycasting</strong> to my technique. This was when I remembered to tell <strong>MyTechnique</strong> about the <strong>PlaneCrusher</strong> script.</p>
+
+                            <p>After some time of thinking, I initialized a <strong>PlaneCrusher</strong> class object in <strong>MyTechnique</strong>. Then, in the <strong>Update</strong> function, which I renamed to <strong>FixedUpdate</strong> by analogy with the <strong>RaycastTechnique</strong> file, I referenced a selected object from <strong>PlaneCrusher</strong>. <div class="text-center">
+                            <img src="src/project/myTechnique.png" class="card-img-top w-50 py-3" alt="MyTechnique. Unity Tutorial">
+                            <div class="card-body text-center"><p class="card-text">MyTechnique. Unity Tutorial</p></div>
+                        </div></p>
+
+                            <p>I also dragged an Airplane object in <strong>Interaction Technique Inspector -> MyTechnique</strong> script, as demonstrated in this image. <div class="text-center">
+                            <img src="src/lab2/InteractionTechnique.jpg" class="card-img-top w-100 py-3" alt="InteractionTechnique.Unity Tutorial">
+                            <div class="card-body text-center"><p class="card-text">InteractionTechnique. Unity Tutorial</p></div>
+                        </div></p>
+
+                            <p>Then, in the <strong>TaskManager</strong> inspector, under the <strong>TaskManager</strong> script, I changed the <strong>Interaction Type</strong> field to <strong>MY_TECHNIQUE</strong>. <div class="text-center">
+                            <img src="src/lab2/TaskManageryTechnique.jpg" class="card-img-top w-100 py-3" alt="TaskManager Technique. Unity Tutorial">
+                            <div class="card-body text-center"><p class="card-text">TaskManager Technique. Unity Tutorial</p></div>
+                        </div></p>
+
+                            <p>However, after testing the code, I realized that <strong>OnTriggerEnter</strong> is only called once when the plane enters the object, which doesn’t give enough time for the user to click the button.</p>
+
+                            <p>For this reason, I changed <strong>OnTriggerEnter</strong> to the <strong>OnTriggerStay</strong> function, which is called repetitively until the plane is inside a certain object. It’s very good that our plane is small enough to fit only within one object because I don’t know how this function would react if the plane was in two objects at a time.</p>
+
+                            <p>I decided to check it later because I couldn’t wait to see if the code was going to work or not. And it did!</p>
+
+                            <p>While working on this part of the project, we didn’t have the plane’s navigation perfectly done yet, so I had to simulate plane flying by just moving the plane manually. I changed its position to the position of the object that had to be selected. Then I clicked to select it, and everything worked.</p>
+
+                            <p>At the end, I added one line of code to the <strong>PlaneCrusher</strong> <strong>OnTriggerStay</strong> function to deactivate the plane after selecting an object, so that the plane would start flying from the same point to select each product from the shelf. <div class="text-center">
+                            <img src="src/lab2/disactivatePlane.jpg" class="card-img-top w-50 py-3" alt="Disactivate Plane. Unity Tutorial">
+                            <div class="card-body text-center"><p class="card-text">Set Disactivate Plane. Unity Tutorial</p></div>
+                        </div></p>
+                            <p>Continue reading in <a href="#mattew" id="toMattew">Mattew's part</a> of implementation</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mattew">
+        <div class="p-3 text-bg-dark" id="mattewMenu">
+            <div class="container">
+                <ul class="nav me-lg-auto mb-2 justify-content-between mb-md-0">
+                    <li><a href="#overview" class=" px-2 text-white"><h4>1. High level overview</h4></a></li>
+                    <li><a href="#airplaneController" class=" px-2 text-white"><h4>2. Modifying AirplaneController</h4></a></li>
+                    <li><a href="#fusioning" class=" px-2 text-white"><h4>3. Fusioning Work</h4></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="rw d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 mx-0 fs-4" id="mattewBody">
+            <div class=" col-6 pt-3 px-3 pt-md-5 px-md-5 text-left overflow-hidden flex-fill">
+                <div class="my-3 p-3">
+                    <div class="lead mx-md-5 px-5 fs-4">
+                        <div id="overview" class="mattew pb-4">
+                            <h3 class="text-center my-4">High level overview</h3>
+                            <p>How the airplane flies is the most important aspect to program correctly, so I handled that first. An important design limitation is that, although the airplane has three degrees of freedom, a joystick only has two: horizontal and vertical. It's possible to use the <strong>B</strong> and <strong>A</strong> buttons to simulate the third axis of freedom, but users are less likely to be familiar, notice, or associate these buttons with the third axis. Thus, we have to choose two axes to act as the main plane controller.</p>
+                            <p>Since <strong>pitch</strong> is the only degree of freedom that corresponds to vertical movement, it gets the vertical joystick movement. That leaves either <strong>yaw</strong> or <strong>roll</strong> for horizontal movement. Although these two, in theory, enable different movements, for our purposes they largely fulfill the same action. In testing, <strong>yaw</strong> was more consistent and easier to control than roll, in addition to mapping well to how a car operates, which more users would have had experience with. Yaw was therefore mapped to horizontal joystick movement, with roll relegated to the <strong>B</strong> and <strong>A</strong> buttons.</p>
+                            <div class="text-center">
+                                <img src="src/project/Diagram%20showing%20pitch,%20roll,%20and%C2%A0yaw.jpg" class="card-img-top w-50 py-3" alt="Diagram showing pitch, roll, and yaw">
+                                <div class="card-body text-center"><p class="card-text">Diagram showing pitch, roll, and yaw</p></div>
+                            </div>
+                            <p>Additionally, the user can <strong>speed up</strong> the airplane by holding down the joystick controller and activating a <strong>turbo</strong>.</p>
+                            <p>The user has to be able to <strong>spawn</strong> the airplane. To do so, they have to point in the direction of the object and then click the <strong>secondary hand trigger</strong>. This will spawn the airplane, with its initial direction set to the direction of the right controller.</p>
+                            <p>Finally, for the user to be able to <strong>select</strong> something, the airplane has to collide with the object. It's not difficult to do, as it's a built-in function in Unity. However, the airplane constantly slamming against objects made it difficult to navigate between different objects, especially those that were obscured behind other objects. As such, the airplane is not physically present and intentionally <strong>clips through</strong> other objects. This has the added benefit of allowing the user to more easily select objects, as they can wait for the airplane to be more fully inside the object before selecting it.</p>
+                        </div>
+                        <div id="airplaneController" class="mattew pb-4">
+                            <h3 class="text-center my-4">Modifying AirplaneController</h3>
+                            <p>The file <strong>‘AirplaneController’</strong> was created to be able to respond to user interactions and adjust its flight direction. This script was provided to us with the Unity asset, and we used it as a baseline for the airplane script, which had already coded for us various different functions.</p>
+                            <p>The modifications made to the script included:</p>
+                            <ol>
+                                <li>Reassigning the controls from <strong>keyboard commands</strong> to <strong>VR controller inputs</strong>.</li>
+                                <li>Disabling the <strong>collision check</strong> that disables the controls and sends the airplane into freefall.</li>
+                            </ol>
+                        </div>
+                        <div id="fusioning" class="mattew pb-4">
+                            <h3 class="text-center my-4">Fusioning Work</h3>
+                            <p>While I do know how to use <strong>GitHub</strong> and <strong>Git</strong>, I didn’t really want to bother having to set that up. For a relatively small project like this, it was easier to do it manually instead of setting up a GitHub repository.</p>
+                            <p>Not only did the project exceed the <strong>max size limit</strong>, but the few scripts that we worked on were independent of one another. So what ended up happening was that I got sent the work that she did and simply <strong>copied and pasted</strong> the code.</p>
+                            <p>Since we worked on different parts of the script, there was little overlap between our work, and so there were no code conflicts to resolve.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="w-100 mx-0" id="evaluation">
+        <div class="pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden flex-fill" style="background-color: #ffa343">
+            <a href="project.html" class="text-decoration-none text-reset">
+                <div class="my-3 p-4 pb-5">
+                    <h2 class="display-5">Evaluation<a href="#menu" class="text-dark mx-3"><span>O</span></a></h2>
+                    <p class="lead"></p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="p-3 my-3 text-bg-dark" id="evaluationMenu">
+        <div class="container">
+            <ul class="nav me-lg-auto mb-2 justify-content-between mb-md-0">
+                <li><a href="#participants" class=" px-2 text-white"><h4>Participants</h4></a></li>
+                <li><a href="#results" class=" px-2 text-white"><h4>Results</h4></a></li>
+                <li><a href="#futureWork" class=" px-2 text-white"><h4>Future Work</h4></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class=" rw d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 mx-0 fs-4">
+        <div class=" col-6 pt-3 px-3 pt-md-5 px-md-5 text-left overflow-hidden flex-fill">
+            <div class="my-3 p-3">
+                <div class="lead mx-md-5 px-5 fs-4">
+                    <p>
+                        Technically, we found all we needed for testing inside the TaskManager script. All we changed was replacing  dataPath to a persistentDataPath. And after we could start the testing.
+                    </p>
+
+                    <h3 class="text-center my-4" id="participants">Participants</h3>
+
+                    <p>To find participants to test our technique, we asked our friends and close ones for help. In the end, we collected <strong>three participants</strong>:</p>
+
+                    <ul>
+                        <li><strong>Danny</strong>, 24 y.o., linguistics student, my roommate.</li>
+                        <li><strong>John</strong>, 21 y.o., IGD student.</li>
+                        <li><strong>Jenny</strong>, 24 y.o., IGD student.</li>
+                    </ul>
+
+                    <p>Before testing, we explained how our selection technique was going to work and then started the testing.</p>
+
+                    <h3 class="text-center my-4" id="results">Results</h3>
+
+                    <p>Based on the testing, our technique proved to be a very complicated task for the following reasons:</p>
+
+                    <h4>Sharp Navigation</h4>
+                    <p>In order to control the plane, users used <strong>Up, Down, Left, and Right</strong> buttons on the joystick. As expected, it took each of the participants some time to get used to the controllers. According to <strong>Danny’s</strong> comments, the plane’s movements were too sharp, which forced her to be very focused during the entire flying process, especially when turning.</p>
+
+                    <h4>Inverting Controllers</h4>
+                    <p>While trying to hit the target, <strong>Danny and John</strong> accidentally turned the plane upside down without noticing it. Since the navigation was <strong>plane-centered</strong>, when the user pushed the joystick’s button to the left, the plane turned to its left. However, when the plane was upside-down, the controls reversed: when participants pressed the right button, they saw the plane turn left. This created confusion. Since participants did not immediately understand the reason for this change, it seemed as if the right button sometimes turned the plane right, and five minutes later it turned it left. As <strong>Danny</strong> commented, it felt like <em>gaslighting</em>.</p>
+
+                    <h4>Losing the Plane</h4>
+                    <p>Our plane flies straight without stopping, which makes it important for participants to concentrate on when they turn and where. If they didn’t select a product in time or missed it, they had to turn their plane around and try again. During our testing, <strong>all three participants</strong> lost their plane on the shelf at least once. Since the plane could fly through products on the shelf, participants often lost sight of it. <strong>Jenny</strong> admitted that she started panicking because of it. The tactic participants used to find the plane again was usually chaotically clicking buttons and searching for it visually. Eventually, all participants managed to find the plane again. <strong>Jenny</strong> shared that she expected there to be a button to summon the plane back to her.</p>
+
+                    <h4>Small Plane Size</h4>
+                    <p>Sometimes the products that participants had to select were close to them, but in some cases, they were quite far. When flying far away, the plane became ridiculously small. <strong>John</strong> even mentioned its resemblance to a fly. For participants who did the testing without the ability to move, selecting an object at a distance was a challenge. However, <strong>John</strong> successfully managed to do it.</p>
+
+                    <p>In summary, all these obstacles made the testing process long and complicated. After the first participant, who got tired of the test after selecting the first object, we adjusted our approach. From that point, we limited testing to selecting only <strong>one object</strong>, and if participants had extra time and wanted to continue, they could attempt to select a second object.</p>
+                    <p>All <strong>three participants</strong> successfully selected the first object. Only <strong>one out of three</strong> managed to select the second as well.</p>
+
+                    <p>Due to these results, it was impossible to compare our technique to <strong>raycasting</strong> because of the <strong>significant usability differences</strong>. It was clear that for the purpose of <strong>fast object selection</strong>, raycasting is far more effective.</p>
+
+                    <p>However, our selection method can be considered an <strong>entertaining game or challenge</strong>. Based on the overall impressions of the participants, all of them mentioned <strong>positive feelings</strong>.</p>
+                    <ul>
+                        <li><strong>One-third</strong> of the participants laughed during testing.</li>
+                        <li>One participant said he was highly motivated to select an object and felt very happy when he succeeded.</li>
+                        <li>Participants praised the <strong>plane's design</strong>, calling it <em>"cute"</em>.</li>
+                        <li>They also noted that this selection technique was <strong>unusual</strong> and different from anything they had experienced before.</li>
+                    </ul>
+
+
+                    <h3 class="text-center my-4" id="futureWork">Future work</h3>
+                    <p><strong>Suggested Improvements</strong></p>
+
+                    <p>Based on the collected feedback, here are the improvements that, in our opinion, could enhance the effectiveness and user experience of our selection technique:</p>
+
+                    <ul>
+                        <li><strong>Make the turns softer and more predictable.</strong></li>
+                        <li><strong>Introduce a maximum plane deviation</strong> so that it always stays bottom-down.</li>
+                        <li><strong>Switch to a plane point of view</strong> when flying it.</li>
+                    </ul>
+
+                    <p>Furthermore, this selection technique could serve as the foundation for a <strong>puzzle video game</strong> based on selecting objects. We are convinced that it has a lot of potential.</p>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const alinaPart = document.getElementById("alina");
+        const mattewPart = document.getElementById("mattew");
+        const alinaLink = document.querySelector("a[href='#alina']");
+        const mattewLink = document.querySelector("a[href='#mattew']");
+        const continueReadingLink = document.getElementById("toMattew")
+        const alinaTab = alinaLink.parentElement;
+        const mattewTab = mattewLink.parentElement;
+
+        function resetTabs() {
+            alinaTab.style.backgroundColor = "";
+            mattewTab.style.backgroundColor = "";
+        }
+
+        function showPart(partToShow, partToHide, activeTab) {
+            partToShow.style.display = "block";
+            partToHide.style.display = "none";
+            resetTabs();
+            activeTab.style.backgroundColor = "#ffa343";
+        }
+
+        showPart(alinaPart, mattewPart, alinaTab);
+
+        alinaLink.addEventListener("click", function(event) {
+            event.preventDefault();
+            showPart(alinaPart, mattewPart, alinaTab);
+        });
+
+        mattewLink.addEventListener("click", function(event) {
+            event.preventDefault();
+            showPart(mattewPart, alinaPart, mattewTab);
+        });
+
+        if (continueReadingLink) {
+            continueReadingLink.addEventListener("click", function(event) {
+                event.preventDefault();
+                showPart(mattewPart, alinaPart, mattewTab);
+                mattewPart.scrollIntoView({ behavior: "smooth" });
+            });
+        }
+    });
+</script>
+
+</body>
+</html>
